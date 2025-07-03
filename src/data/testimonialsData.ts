@@ -55,19 +55,7 @@ export const testimonials: Testimonial[] = [
     company: 'Independent Artist',
     text: 'My online art sales have skyrocketed by 500% since my new portfolio website launched. The design beautifully showcases my work and makes purchasing seamless.',
     projectType: 'Website'
-  },
-  {
-    name: 'Robert Smith',
-    position: 'Principal',
-    company: 'Smith Financial',
-    text: 'The rebrand has positioned us as a modern, trustworthy financial partner. Client inquiries have increased by 150% and our professional image has been elevated significantly.',
-    projectType: 'Branding'
-  },
-  {
-    name: 'Dr. Adebayo John',
-    position: 'Owner',
-    company: 'Bright Smile Dental',
-    text: 'We now dominate local search results and rank #1 for dental searches in our area. The constant stream of new patients has exceeded all our expectations.',
-    projectType: 'SEO'
   }
+  
+  
 ];
