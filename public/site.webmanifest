@@ -1,0 +1,25 @@
+{
+  "name": "VisionAura - Digital Agency",
+  "short_name": "VisionAura",
+  "description": "Turning Vision into Digital Success - Mobile App Development, Website Design, Branding & Local SEO",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#2563eb",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/Vision Aura WT PNG_054343.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/Vision Aura WT PNG_054343.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "categories": ["business", "productivity", "technology"],
+  "lang": "en",
+  "dir": "ltr"
+}
