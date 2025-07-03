@@ -48,14 +48,8 @@ export const testimonials: Testimonial[] = [
     company: 'MedCare Clinic',
     text: 'The telemedicine app has revolutionized how we connect with our patients. It\'s HIPAA-compliant, user-friendly, and has onboarded over 5,000 patients successfully.',
     projectType: 'Mobile App'
-  },
-  {
-    name: 'Bright Art',
-    position: 'Fine Artist',
-    company: 'Independent Artist',
-    text: 'My online art sales have skyrocketed by 500% since my new portfolio website launched. The design beautifully showcases my work and makes purchasing seamless.',
-    projectType: 'Website'
   }
+  
   
   
 ];
