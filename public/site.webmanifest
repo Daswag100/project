@@ -9,12 +9,12 @@
   "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "/Vision Aura WT PNG_054343.png",
+      "src": "/Vision Aura Logo PNG_054343.png",
       "sizes": "192x192",
       "type": "image/png"
     },
     {
-      "src": "/Vision Aura WT PNG_054343.png",
+      "src": "/Vision Aura Logo PNG_054343.png",
       "sizes": "512x512",
       "type": "image/png"
     }
