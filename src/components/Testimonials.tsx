@@ -89,7 +89,7 @@ const Testimonials: React.FC<TestimonialsProps> = ({ isHomePage = false }) => {
               to="/about#testimonials"
               className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-teal-600 text-white font-medium rounded-full hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200"
             >
-              Click More
+              View More
             </Link>
           </div>
         )}
