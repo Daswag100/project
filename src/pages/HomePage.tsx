@@ -10,7 +10,7 @@ const HomePage = () => {
       <Hero />
       <Services />
       <Portfolio showAll={false} />
-      <Testimonials />
+      <Testimonials isHomePage={true} />
     </>
   );
 };

@@ -3,7 +3,14 @@ import { Link } from 'react-router-dom';
 import { Star, Quote } from 'lucide-react';
 import { testimonials } from '../data/testimonialsData';
 
-const Testimonials = () => {
+interface TestimonialsProps {
+  isHomePage?: boolean;
+}
+
+const Testimonials: React.FC<TestimonialsProps> = ({ isHomePage = false }) => {
+  // Show only 2 testimonials on homepage, all on other pages
+  const displayTestimonials = isHomePage ? testimonials.slice(0, 2) : testimonials;
+
   return (
     <section className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -18,8 +25,8 @@ const Testimonials = () => {
         </div>
 
         {/* Testimonials Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {testimonials.map((testimonial, index) => (
+        <div className={`grid gap-8 ${isHomePage ? 'md:grid-cols-2' : 'md:grid-cols-2 lg:grid-cols-3'}`}>
+          {displayTestimonials.map((testimonial, index) => (
             <div
               key={index}
               className="bg-gray-50 rounded-2xl p-8 hover:shadow-lg transform hover:-translate-y-1 transition-all duration-300 relative"
@@ -75,23 +82,37 @@ const Testimonials = () => {
           ))}
         </div>
 
-        {/* Call to Action */}
-        <div className="text-center mt-16">
-          <div className="bg-gradient-to-r from-blue-50 to-teal-50 rounded-2xl p-8 md:p-12">
-            <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-              Ready to Join Our Success Stories?
-            </h3>
-            <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
-              Let's transform your vision into digital success. Our team is ready to help you achieve your business goals.
-            </p>
+        {/* Homepage: Show "Click More" button if there are more testimonials */}
+        {isHomePage && testimonials.length > 2 && (
+          <div className="text-center mt-12">
             <Link
-              to="/contact"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-teal-600 text-white font-semibold rounded-full hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+              to="/about#testimonials"
+              className="inline-flex items-center px-8 py-3 bg-gradient-to-r from-blue-600 to-teal-600 text-white font-medium rounded-full hover:shadow-lg transform hover:-translate-y-0.5 transition-all duration-200"
             >
-              Start Your Project Today
+              Click More
             </Link>
           </div>
-        </div>
+        )}
+
+        {/* Full page: Call to Action */}
+        {!isHomePage && (
+          <div className="text-center mt-16">
+            <div className="bg-gradient-to-r from-blue-50 to-teal-50 rounded-2xl p-8 md:p-12">
+              <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+                Ready to Join Our Success Stories?
+              </h3>
+              <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
+                Let's transform your vision into digital success. Our team is ready to help you achieve your business goals.
+              </p>
+              <Link
+                to="/contact"
+                className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-600 to-teal-600 text-white font-semibold rounded-full hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+              >
+                Start Your Project Today
+              </Link>
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );

@@ -8,7 +8,9 @@ const AboutPage = () => {
     <div className="pt-20">
       <About />
       <Process />
-      <Testimonials />
+      <div id="testimonials">
+        <Testimonials isHomePage={false} />
+      </div>
     </div>
   );
 };
